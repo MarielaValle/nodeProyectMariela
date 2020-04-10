@@ -1,0 +1,11 @@
+{
+  "name": "version2nodeproyect",
+  "version": "1.0.0",
+  "description": "Mi primer programa con Node",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vallecillo Mariela",
+  "license": "ISC"
+}
