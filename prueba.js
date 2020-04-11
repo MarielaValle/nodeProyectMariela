@@ -17,10 +17,24 @@ const movies = [{
 
 console.log(movies.length)
 
- let titulos = movies.map(function (movies) {
- return movies.title;
- });
- titulos.sort();
- titulosSeparados =titulos.join('\n')
 
-console.log (titulosSeparados)
+	const titulo = '\n - Películas más votadas\n'
+	
+	const masVotadas = movies.filter(function(movie){
+	 return movie.vote_average >= 7
+	
+	});
+	 masVotadas.map(function (movies) {
+		return [movies.title,movies.vote_average]  
+		 });
+	
+	
+	
+	console.log(masVotadas)
+	
+
+
+	
+	
+ 
+  
