@@ -240,11 +240,29 @@ function votadas(){
 		 const pelisSeparadas = pelis.join ('\n\n');
 		 
 	
-	 
-		  
-
 	return titulo + pelisSeparadas
 	}
+
+ // sucursales
+ function sucursales(){
+
+    const titulo = '\n Nuestras Salas'
+
+    const totalSalas='\n\n Total Salas: ' +theaters.length +' \n \n';
+
+    const listadoDeSalas = theaters.map(function(theaters){ 
+
+      return [theaters.name,theaters.address,theaters.description]
+    });
+    listadoDeSalas.sort();
+    const listadoDeSalasOrdenado=listadoDeSalas.join('\n\n')
+
+     return titulo + totalSalas +listadoDeSalasOrdenado
+}
+
+
+
+
 
 
 // Servidor
@@ -265,7 +283,7 @@ http.createServer((req, res) => {
 			res.end(votadas());
 			break;
 		case '/sucursales':
-			res.end('Sucursales');
+			res.end(sucursales());
 			break;
 		case '/contacto':
 			res.end('Contacto');
