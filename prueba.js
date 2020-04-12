@@ -34,7 +34,18 @@ console.log(movies.length)
 	
 
 
-	
+	let promedioPelis = 0;
+    movies.forEach(elemento => {
+    promedioPelis += elemento.vote_average});
+    let promedio = Math.round(promedioPelis/movies.length);
+    let masValoradas = movies.filter(movie => movie.vote_average >= 7);
+    let totalPelisRating = masValoradas.length + '\n\n';
+    let masValuadas = ' \n';
+    for (let pelis of masValoradas) {
+    masValuadas += `${pelis.title}\n${pelis.vote_average}\n${pelis.overview}\n\n`;
+    }
+    res.end(`${tituloMasVotadas}\n\n\n ${totalPeli}\n\n\n${totalPelisRating}\nRating promedio: ${promedio}\n${masValuadas}`);
+    break;
 	
  
   

@@ -231,16 +231,18 @@ const pelisSeparadas = pelis.join ('\n\n  -');
 	
 // mas votadas
 function votadas(){
-	const titulo = '\n - Películas más votadas\n'
+	const titulo = '\n - Películas más votadas\n\n'
 	
 	const pelis = movies.map(function (movies) {
-		return [movies.title,movies.vote_average]  
-		 });
-     pelis.sort();
-     const pelisSeparadas = pelis.join ('\n\n  -');
-
-    
+		if(movies.vote_average >=7)	return [movies.title,movies.vote_average]  
+			 });
+		 pelis.sort();
+		 const pelisSeparadas = pelis.join ('\n\n');
+		 
 	
+	 
+		  
+
 	return titulo + pelisSeparadas
 	}
 
