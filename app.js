@@ -272,6 +272,30 @@ function contacto (){
     return titulo + contenido
 }
 
+// preguntas frecuentes
+
+function preguntasF (){
+    const titulo = '\n Preguntas Frecuentes';
+
+	const totalPreguntas = '\n\n-Total de preguntas: '+faqs.length +'\n\n ';
+	
+	//'\n\n+faqs.length+\n\n';
+
+    const listadoPreguntas = faqs.map(function(faqs){
+
+		return [faqs.faq_title,faqs.faq_answer]
+    });
+
+    const faqsSeparadas = listadoPreguntas.join('\n\n');
+
+    return titulo + totalPreguntas + faqsSeparadas
+
+}
+
+
+
+
+
 
 
 // Servidor
@@ -298,7 +322,7 @@ http.createServer((req, res) => {
 			res.end(contacto());
 			break;
 		case '/preguntas-frecuentes':
-			res.end('Preguntas Frecuentes');
+			res.end(preguntasF());
 			break;
 		default:
 			res.end('404 not found')
