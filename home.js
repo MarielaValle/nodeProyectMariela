@@ -156,7 +156,7 @@ const movies = [
     const pelisSeparadas=pelis.join('\n')
 		
 	
-        const piePagina='\n\n\nRecordá que podés visitar las secciones: \n\n-En Cartelera(/en-cartelera) \n-Más votadas(/mas-votadas)\n-Sucarsales(/Sucursales)\n-Contacto(/Contacto)\n-Preguntas Frecuentes(/Preguntas Frecuentes)'
+        const piePagina='\n\n\nRecordá que podés visitar las secciones: \n\n-En Cartelera(/en-cartelera) \n-Más votadas(/mas-votadas)\n-Sucarsales(/Sucursales)\n-Contacto(/Contacto)\n-Preguntas Frecuentes(/Preguntas-Frecuentes)'
        
         return titulo +totalPeli + listadoPeli + pelisSeparadas +piePagina
 
