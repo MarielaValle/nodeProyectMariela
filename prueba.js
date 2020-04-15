@@ -1,3 +1,4 @@
+
 const fs = require('fs'); 
 
 let movies=JSON.parse(
@@ -29,7 +30,7 @@ let home={
     }
 	
 }
-module.exports=home
+console.log (home.cargarDetalleHome())
  
     
 

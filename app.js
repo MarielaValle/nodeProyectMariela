@@ -33,7 +33,7 @@ const theaters = [
 ];
 
 // Home
-let home = require('./home')
+let home = require('./src/home')
 	
 // enCartelera
 
