@@ -127,7 +127,7 @@ http.createServer((req, res) => {
 	switch (req.url) {
 		// Home 
 	case '/':
-			res.end(home);
+			res.end(home.cargarDetalleHome());
 			break;
 		// En cartelera
 		case '/en-cartelera':
