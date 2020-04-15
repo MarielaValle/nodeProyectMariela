@@ -1,10 +1,11 @@
 const fs = require('fs'); 
 
-let movies=JSON.parse(
+let moviesJ=JSON.parse(
 	fs.readFileSync('.data/movies.json',{encoding:'utf8',
 	})
 	);
-	
+
+    
 
  function cargarDetalleHome(){
 
@@ -31,7 +32,7 @@ let movies=JSON.parse(
 
     
  
-    
+    modulo.exports=cargarDetalleHome;
 
 
    
