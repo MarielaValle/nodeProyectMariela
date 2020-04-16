@@ -1,11 +1,13 @@
 const fs = require('fs'); 
 
 const theaters=JSON.parse(
-	fs.readFileSync('.data/theaters.json',{encoding:'utf8',
+	fs.readFileSync('./data/theaters.json',{encoding:'utf8',
 	})
 	);
 
-function sucursales(){
+  let sucursales={
+       theaters:theaters,
+       sucursales:function(){
 
     const titulo = '\n Nuestras Salas'
 
@@ -17,10 +19,13 @@ function sucursales(){
       });
 
       listadoDeSalas.sort();
-      const listadoDeSalasOrdenado=listadoDeSalas.join('\n')
+      const listadoDeSalasOrdenado=listadoDeSalas.join('\n\n')
     
 	  console.log(listadoDeSalasOrdenado)
 
      return titulo + totalSalas +listadoDeSalasOrdenado
 }
 
+  }
+
+  module.exports=sucursales

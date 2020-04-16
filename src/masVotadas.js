@@ -1,11 +1,13 @@
 const fs = require('fs'); 
 
 let movies=JSON.parse(
-	fs.readFileSync('.data/movies.json',{encoding:'utf8',
+	fs.readFileSync('./data/movies.json',{encoding:'utf8',
 	})
 	);
 
-function votadas(){
+let masVotadas={
+	peliculas:movies,
+	votadas: function (){
 	const titulo = '\n - Películas más votadas\n\n'
 	
 	const pelis = movies.map(function (movies) {
@@ -18,5 +20,7 @@ function votadas(){
 	return titulo + pelisSeparadas
 	}
 	   
-	
+}
+
+module.exports=masVotadas
 	

@@ -1,11 +1,13 @@
  const fs = require('fs'); 
 
 let movies=JSON.parse(
-	fs.readFileSync('.data/movies.json',{encoding:'utf8',
+	fs.readFileSync('./data/movies.json',{encoding:'utf8',
 	})
 	);
 
-function cartelera(){
+    let enCartelera={
+      peliculas:movies,
+      cartelera: function(){
     const titulo = '\n-En Cartelera';
     const totalPelis= '\n\n-Total Películas = '+ movies.length;
     const listadoPelis = '\n\n-Listado de Películas: \n\n'
@@ -17,6 +19,6 @@ function cartelera(){
 
     return titulo + totalPelis + listadoPelis + pelisSeparadas
     }
-    
+}
 
-cartelera()
+module.exports=enCartelera
